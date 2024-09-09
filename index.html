@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <title>Smash or Pass</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container" id="game-container">
+      <h1>Smash or Pass - Meme Edition</h1>
+      <div id="meme-container">
+        <img id="meme-img" src="" alt="Meme" />
+      </div>
+      <div class="buttons">
+        <button id="smash-btn">Smash</button>
+        <button id="pass-btn">Pass</button>
+      </div>
+      <div id="result"></div>
+    </div>
+
+    <div class="container" id="score-container" style="display: none">
+      <h1>Résultats</h1>
+      <p id="score-text" class="smash">
+        Vous avez smashé X memes et passé Y memes.
+      </p>
+      <button onclick="restartGame()">Rejouer</button>
+
+      <div id="score-summary">
+        <div id="smash-column">
+          <table id="smash-table">
+            <thead>
+              <tr>
+                <th colspan="2">Smash</th>
+              </tr>
+            </thead>
+            <tbody id="smash-list"></tbody>
+          </table>
+        </div>
+        <div id="separator"></div>
+        <div id="pass-column">
+          <table id="pass-table">
+            <thead>
+              <tr>
+                <th colspan="2">Pass</th>
+              </tr>
+            </thead>
+            <tbody id="pass-list"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

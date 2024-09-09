@@ -1,0 +1,199 @@
+/* Importer une police moderne depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #f7f9fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#meme-container {
+    margin: 20px 0;
+}
+
+#meme-img {
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    border: 3px solid #ddd;
+    object-fit: contain; /* L'image sera contenue dans la zone sans être coupée */
+    background-color: #f0f0f0; /* Couleur de fond si l'image ne remplit pas complètement la zone */
+}
+
+.buttons button {
+    padding: 12px 25px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#pass-btn {
+    background-color: #ff6f6f;
+    color: white;
+}
+
+#pass-btn:hover {
+    background-color: #ff4c4c;
+    transform: scale(1.05);
+}
+
+#smash-btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+#smash-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+}
+
+#score-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+#score-summary {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#smash-column, #pass-column {
+    width: 45%;
+    overflow: hidden; /* Masquer les barres de défilement */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+#separator {
+    width: 2px;
+    background-color: #e0e0e0;
+    margin: 0 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    text-align: center;
+}
+
+th {
+    font-size: 22px;
+    padding: 12px;
+    color: white;
+    background-color: #333;
+}
+
+#smash-table th {
+    background-color: #4caf50; /* Couleur de fond pour Smash */
+}
+
+#pass-table th {
+    background-color: #ff6f6f; /* Couleur de fond pour Pass */
+}
+
+tbody {
+    display: block;
+    max-height: 50vh; /* Ajusté pour une meilleure visibilité */
+    overflow-y: auto; /* Permet le défilement */
+}
+
+tbody::-webkit-scrollbar {
+    display: none; /* Masquer la barre de défilement pour WebKit */
+}
+
+tbody {
+    -ms-overflow-style: none; /* Masquer la barre de défilement pour Internet Explorer et Edge */
+    scrollbar-width: none; /* Masquer la barre de défilement pour Firefox */
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#smash-list img, #pass-list img {
+    max-width: 120px;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+    margin: 5px;
+    transition: transform 0.2s;
+}
+
+#smash-list img:hover, #pass-list img:hover {
+    transform: scale(1.05);
+}
+
+#score-container button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#score-container button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Nouveau style pour le texte de résultat final */
+#score-text {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+#score-text.smash {
+    color: #000000; /* Couleur du texte pour Smash */
+}
