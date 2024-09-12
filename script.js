@@ -16,6 +16,10 @@ const smashList = document.getElementById('smash-list');
 const passList = document.getElementById('pass-list');
 const scoreText = document.getElementById('score-text');
 
+// Sélectionner les fichiers audio
+const smashSound = document.getElementById('smash-sound');
+const passSound = document.getElementById('pass-sound');
+
 // Fonction pour charger les memes à partir de l'API Imgflip
 async function loadMemesFromAPI() {
     try {
@@ -58,12 +62,14 @@ function nextMeme() {
 passBtn.addEventListener('click', () => {
     passCount++;
     passMemes.push(memes[currentMemeIndex]);  // Ajout du meme dans la liste "Pass"
+    passSound.play();  // Jouer le son "Pass"
     nextMeme();
 });
 
 smashBtn.addEventListener('click', () => {
     smashCount++;
     smashMemes.push(memes[currentMemeIndex]);  // Ajout du meme dans la liste "Smash"
+    smashSound.play();  // Jouer le son "Smash"
     nextMeme();
 });
 
